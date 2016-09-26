@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>Submit Weather</title>
+    <link type="text/css" rel="stylesheet" href="/elegant-aero.css" />
+   <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="bootstrap-3.3.6/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+
+
+
+
+
+  </head>
+  <!-- Thanks to Mario C. E. Freese <mcefreese@gmail.com> for permission to use background image -->
+  <body style='background-image:URL("AirLines-white.jpg");background-repeat:no-repeat;background-position:center top;-webkit-background-size:100%;-moz-background-size:100%;-o-background-size:100%;background-size: 100%;'>
+    <p style="margin-bottom:5px"/>
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Shuaib's Divvy Project</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="historical_data.html">Historical Data</a></li>
+              <li class="active"><a href="#">Add_New_Data</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+
+
+    <h2 class="elegant-aero" style="margin-left:30%;text-align:center;display:inline-block;color:#5E5E5E;background:#FFFFFF">&nbsp;Submit New Divvy and Weather&nbsp;</h2>
+    <form action="/cgi-bin/ahmed/divvy/add_new_data.pl" style="background:#FFFFFF;width:60%;margin:auto"  method="get" class="elegant-aero">
+	<span>> Enter data for a new trip remember that days and months less than ten should be single digits &nbsp; </span><br><br>
+	<label>
+	<span>Date:</span> <input type="text" name="date" value="m/d/year"/>
+      </label><br>
+
+      <label> 
+	<span>Trip Time:</span> <input type="text" name="trip_time" value="Enter time in minutes"/>
+      </label><br>
+
+      <label> 
+	<span>Max Temp:</span> <input type="text" name="max_temp" value="Enter temp F"/>
+      </label><br>
+
+      <label> 
+	<span>Min Temp:</span> <input type="text" name="min_temp" value="Enter temp F"/>
+      </label><br>
+
+      <label> 
+	<span>Precipitation:</span> <input type="text" name="precipitation" value="Enter inches of precipitation"/>
+      </label><br>
+
+      <label> 
+	<span>Snow:</span> <input type="text" name="snow" value="Enter inches of snowfall"/>
+      </label><br>
+
+      <label>
+	<span>&nbsp;</span><input type="submit" value="Submit">
+      </label>
+    </form>
+
+    <iframe frameBorder="0" name="results_iframe" style="width:100%"/>
+  </body>
+</html>
